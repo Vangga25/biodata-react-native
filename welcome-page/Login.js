@@ -10,7 +10,7 @@ export default class Login extends Component {
     	source={require('./fb.png')} />
     	<TextInput
     	style = {styles.inputBox}
-    	placeholder="Telepon atau E-mail"
+    	placeholder="E-mail"
     	/>
     	<TextInput
     	style = {styles.inputBox}
