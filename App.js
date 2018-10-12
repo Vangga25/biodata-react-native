@@ -1,11 +1,5 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
-import Judul from './Components/Judul';
+import Judul from './Components/Judul.js';
 import {
   Platform,
   StyleSheet,
@@ -15,54 +9,21 @@ import {
   Image
 } from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
+import { StackNavigator } from 'react-navigation';
+import Login from './welcome-page/Login';
+import Biodata from './Components/Biodata';
+
+const AppNavigator = StackNavigator({
+  LoginScreen: { screen: Login },
+  BiodataScreen: { screen: Biodata }
 });
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
-  <View style={styles.container} >
-  <Judul/>
-    <Text style={styles.welcome}>
-     Nama = Vangga Fibo Eprila
-    </Text>
-    <Text style={styles.welcome}>
-     Kelas = XI RPL 1 
-    </Text>
-    <Text style={styles.welcome}>
-     No Absen = 38
-    </Text>
-    <Image
-      style={{width: 250, height: 250}}
-      source={require('./d.jpeg')}
-      />
-  </View>
+  
+      <AppNavigator />
 	
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'pink',
-  },
-  welcome: {
-    fontSize: 18,
-    textAlign: 'left',
-	color: 'purple',
-    margin: 1,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});

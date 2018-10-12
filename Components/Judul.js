@@ -11,10 +11,8 @@ export default class Judul extends Component {
 }
 const stylee = {
 	judul:{
-		color:'#F00',
-		fontSize: 50,
-		fontWeight:'bold',	
-		backgroundColor: '#0F0',
-
+		color:'#F2e750',
+		fontSize: 45,
+		fontWeight:'bold',
 	}
 }
